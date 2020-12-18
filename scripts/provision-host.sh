@@ -7,11 +7,13 @@ echo "########################################"
 
 # GENERAL
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade
+sudo apt-get update
 sudo apt-get -y -qq install \
     curl \
     wget \
     git \
     vim \
+    visidata \
     apt-transport-https \
     ca-certificates \
     gnupg-agent \

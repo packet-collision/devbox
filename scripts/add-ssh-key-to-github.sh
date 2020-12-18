@@ -9,7 +9,7 @@ echo ""
 
 dev_public_key=`cat ssh/dev-ssh-key.pub`
 
-echo "Adding dev-ssh-key to packet-collision's github account..."
+echo "Adding dev-ssh-key to your github account..."
 curl \
     --request POST \
     -u $github_username:$github_access_token \

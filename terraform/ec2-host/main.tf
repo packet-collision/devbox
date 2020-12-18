@@ -18,7 +18,7 @@ resource "aws_vpc" "dev" {
   cidr_block = "172.16.0.0/16"
 
   tags = {
-    Name = "dev"
+    Name = "devbox"
   }
 }
 
@@ -26,7 +26,7 @@ resource "aws_internet_gateway" "dev" {
   vpc_id = aws_vpc.dev.id
 
   tags = {
-    Name = "dev"
+    Name = "devbox"
   }
 }
 
@@ -39,7 +39,7 @@ resource "aws_route_table" "dev" {
   }
   
   tags = {
-    Name = "dev"
+    Name = "devbox"
   }
 }
 
@@ -49,7 +49,7 @@ resource "aws_subnet" "dev" {
   availability_zone = "ca-central-1a"
 
   tags = {
-    Name = "dev"
+    Name = "devbox"
   }
 }
 
@@ -79,7 +79,7 @@ resource "aws_security_group" "devbox" {
   }
 
   tags = {
-    Name = "dev"
+    Name = "devbox"
   }
 }
 
@@ -98,7 +98,7 @@ resource "aws_eip" "dev" {
   vpc = true
 
   tags = {
-    Name = "dev"
+    Name = "devbox"
   }
 }
 
@@ -125,7 +125,7 @@ resource "aws_instance" "devbox" {
   }
 
   tags = {
-    Name = "dev"
+    Name = "devbox"
   }
 }
 

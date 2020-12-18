@@ -25,8 +25,7 @@ Install the following (using HomeBrew if you're running mac os):
 
 0. install the AWS CLI and authenticate under the default profile
 1. create a new SSH keypair: `make generate-ssh-keypair`
-2. create and populate the .tfvars file: `cd terraform && cp terraform.tfvars.example terraform.tfvars`
-3. deploy EBS storage (if you want to keep files around after tearing down the host): `make create-persistent-storage`
+2. deploy EBS storage to keep files around after tearing down the host: `make create-storage`
 
 ## Bringing the server up...
 
@@ -34,9 +33,9 @@ Deploy the dev EC2 host: `make deploy-host` (you may need to answer a prompt or 
 
 ## Tearing it all down...
 
-Run `make destroy-host` to just tear down the host.
+Run `make destroy-host` to just tear down the host + networking resources (VPC, internet gateway, etc).
 
-To remote the EBS volume, just go into AWS console and do it!
+To remote the EBS volume, `make destroy-storage`.
 
 ## Configuring VS Code Remote-SSH
 
